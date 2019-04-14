@@ -9,18 +9,15 @@ from sklearn.metrics import mean_squared_error, r2_score
 df = pd.read_csv("Demographic_Statistics_By_Zip_Code.csv")
 x_train = df[['PERCENT MALE']]
 y_train = df[['PERCENT RECEIVES PUBLIC ASSISTANCE']]
+
 #train data (everything but last 20)
 x_test = x_train[len(x_train)-20:]
 y_test = y_train[len(y_train)-20:]
 print(x_train, y_train)
 
-
-
 #testing data (last 20)
 x_train = x_train[:len(x_train)-20]
 y_train = y_train[:len(y_train)-20]
-
-
 
 # Train the model using the training sets
 regr = linear_model.LinearRegression()
