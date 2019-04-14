@@ -14,17 +14,16 @@ x_test = x_train[len(x_train)-20:]
 y_test = y_train[len(y_train)-20:]
 print(x_train, y_train)
 
+
+
 #testing data (last 20)
 x_train = x_train[:len(x_train)-20]
 y_train = y_train[:len(y_train)-20]
 
 
 
-
-
-regr = linear_model.LinearRegression()
-
 # Train the model using the training sets
+regr = linear_model.LinearRegression()
 regr.fit(x_train, y_train)
 
 #Get predictions
